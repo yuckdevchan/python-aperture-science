@@ -1,0 +1,3 @@
+pydub
+colorama
+getkey
