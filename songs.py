@@ -10,6 +10,15 @@ def typewrite(lyric: str):
         sys.stdout.flush()
     time.sleep(0.25)
 
+def typewrite_fastish(lyric: str):
+    print("\033[1m")
+    time.sleep(0.05)
+    for letter in lyric:
+        time.sleep(0.055)
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+    time.sleep(0.25)
+
 def typewrite_fast(lyric: str):
     print("\033[1m")
     time.sleep(0.25)
@@ -67,14 +76,14 @@ def print_aperture():
      =XMMM@MM@MM#H;,-+HMM@M+ /MMMX=
        =%@M@M#@$-.=$@MM@@@M; %M%=
          ,:+$+-,/H#MMMMMMM@- -,
-               =++%%%%+/:-.""")
+               =++%%%%+/:-.\n""")
 
 def wantyougone():
     print(f"\033[48;2;{config.background_color_wantyougone[0]};{config.background_color_wantyougone[1]};{config.background_color_wantyougone[2]}m")
     print(f"\033[38;2;{config.foreground_color_wantyougone[0]};{config.foreground_color_wantyougone[1]};{config.foreground_color_wantyougone[2]}m")
     print(colorama.ansi.clear_screen())
     print_companion_cube()
-    subprocess.Popen(f"""{sys.executable} wantyougone.py""", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.Popen(f"""{sys.executable} music/wantyougone.py""", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     typewrite("'Want you Gone' by GLaDOS")
     typewrite_fast("FORMS FORM-29827281-12-2:")
@@ -100,10 +109,12 @@ def wantyougone():
         sys.stdout.flush()
     time.sleep(1)
     typewrite("That's what I'm counting on")
+    time.sleep(1.6)
     typewrite("I used to want you dead")
     time.sleep(1)
     typewrite("But now I only want you gone")
     time.sleep(4.75)
+    sys.exit()
     print("")
     typewrite("She was a lot like you")
     time.sleep(0.75)
@@ -152,14 +163,14 @@ def stillalive():
     print(f"\033[48;2;{config.background_color_stillalive[0]};{config.background_color_stillalive[1]};{config.background_color_stillalive[2]}m")
     print(f"\033[38;2;{config.foreground_color_stillalive[0]};{config.foreground_color_stillalive[1]};{config.foreground_color_stillalive[2]}m")
     print(colorama.ansi.clear_screen())
+    subprocess.Popen(f"""{sys.executable} music/stillalive.py""", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     print_aperture()
-    subprocess.Popen(f"""{sys.executable} stillalive.py""", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     typewrite("'Still Alive' by GLaDOS")
     typewrite_fast("Forms FORM-29827281-12:")
     typewrite_fast("Test Assessment Report")
     print("")
-    time.sleep(4)
+    time.sleep(2)
     typewrite("This was a triumph.")
     time.sleep(2)
     typewrite("I'm making a note here:")
@@ -168,18 +179,23 @@ def stillalive():
     typewrite("It's hard to overstate")
     time.sleep(0.75)
     typewrite("my satisfaction.")
-    time.sleep(1)
+    time.sleep(2.5)
     typewrite("Aperture Science")
+    time.sleep(2.8)
     typewrite("We do what we must")
     typewrite("because we can.")
+    time.sleep(1.75)
     typewrite("For the good of all of us.")
     typewrite("Except the ones who are dead.")
     print("")
     typewrite("But there's no sense crying")
     typewrite("over every mistake")
     typewrite("You just keeping on trying")
-    typewrite("till you run out of cake.")
-    typewrite("And the science gets done.")
-    typewrite("And you make a neat gun.")
+    typewrite_fastish("till you run out of cake.")
+    typewrite_fastish("And the science gets done.")
+    typewrite_fastish("And you make a neat gun.")
     typewrite("For the people who are")
     typewrite("still alive.")
+
+    typewrite("I can't be bothered to write anymore right now")
+    typewrite("                             - Doug Rattmann")
