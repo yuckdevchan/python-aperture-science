@@ -95,7 +95,7 @@ def wantyougone():
         time.sleep(0.23)
         sys.stdout.write(letter)
         sys.stdout.flush()
-    time.sleep(1.3)
+    time.sleep(1)
     typewrite("That's what I'm counting on")
     typewrite("I used to want you dead")
     time.sleep(1)
