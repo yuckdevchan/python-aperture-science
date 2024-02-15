@@ -1,4 +1,4 @@
-import os, time, sys, colorama, subprocess
+import os, time, sys, colorama, subprocess, config
 from colorama import Back as bg
 
 def typewrite(lyric: str):
@@ -70,6 +70,9 @@ def print_aperture():
                =++%%%%+/:-.""")
 
 def wantyougone():
+    print(f"\033[48;2;{config.background_color_wantyougone[0]};{config.background_color_wantyougone[1]};{config.background_color_wantyougone[2]}m")
+    print(f"\033[38;2;{config.foreground_color_wantyougone[0]};{config.foreground_color_wantyougone[1]};{config.foreground_color_wantyougone[2]}m")
+    print(colorama.ansi.clear_screen())
     print_companion_cube()
     subprocess.Popen(f"""{sys.executable} wantyougone.py""", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
@@ -146,6 +149,9 @@ def wantyougone():
     time.sleep(1)
 
 def stillalive():
+    print(f"\033[48;2;{config.background_color_stillalive[0]};{config.background_color_stillalive[1]};{config.background_color_stillalive[2]}m")
+    print(f"\033[38;2;{config.foreground_color_stillalive[0]};{config.foreground_color_stillalive[1]};{config.foreground_color_stillalive[2]}m")
+    print(colorama.ansi.clear_screen())
     print_aperture()
     subprocess.Popen(f"""{sys.executable} stillalive.py""", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
