@@ -60,6 +60,7 @@ def menu():
     \033[47m{inverted_text}1. Portal 1: Still Alive{aperture_background}
     2. Portal 2: Want you Gone
     """)
+    subprocess.Popen(f"""{sys.executable} menu_open_sfx.py""", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     eek = False
 
@@ -83,6 +84,7 @@ def menu():
     """)
                 eek = True
         elif key == keys.ENTER or key == keys.RIGHT or keys.SPACE:
+            subprocess.Popen(f"""{sys.executable} menu_select_sfx.py""", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             print(aperture_background)
             print(colorama.ansi.clear_screen())
             if eek:
