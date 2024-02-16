@@ -101,5 +101,5 @@ except KeyboardInterrupt:
         print(f"\x1b[1;3mQuitting System... (Attempt {i + 1})")
         time.sleep(0.005)
     print(f"\nCompleted Task: 'Quitting System' in '{i + 1}' Attempts")
-    print("\n\nRemember - testing is the future! And the future starts with you :D\n\n")
+    print("\n\nRemember - testing is the future! And the future starts with you :D\n\n\033[0m")
     sys.exit(0)
